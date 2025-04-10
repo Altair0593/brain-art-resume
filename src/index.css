@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    @apply antialiased bg-background;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-inter font-semibold;
+  }
+}
+
+.social-link {
+  @apply relative flex items-center justify-end transition-all duration-300 ease-in-out;
+}
+
+.social-link-content {
+  @apply flex items-center gap-3 bg-white hover:bg-black rounded-full py-2 px-3 shadow-lg transition-all duration-300 ease-in-out w-[36px] hover:w-auto overflow-hidden;
+}
+
+.social-text {
+  @apply text-sm font-medium text-black whitespace-nowrap transition-all duration-300 opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-white;
+}
+
+.social-icon {
+  @apply w-5 h-5 text-gray-700 transition-colors duration-300 group-hover:text-white flex-shrink-0;
+}
+
+.email-link {
+  @apply relative flex items-center gap-3 text-gray-600 hover:text-black transition-all duration-300 hover:-translate-y-1;
+}
+
+.email-icon {
+  @apply w-4 h-4 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12;
+}
+
+.email-text {
+  @apply text-sm font-medium transition-all duration-300;
+}
+
+.domain-card {
+  @apply bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-gray-100 hover:border-gray-200;
+}
+
+.domain-icon {
+  @apply w-6 h-6 text-gray-700 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6;
+}
+
+.about-me-card {
+  @apply bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-gray-100 hover:border-gray-200 flex items-center gap-4;
+}
+
+.about-me-card-icon {
+  @apply w-8 h-8 text-gray-700 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6;
+}
+
+.lightbox-overlay {
+  @apply fixed inset-0 z-50 bg-black/90 backdrop-blur-sm;
+}
+
+.lightbox-content {
+  @apply fixed inset-0 z-50 flex items-center justify-center p-4;
+}
