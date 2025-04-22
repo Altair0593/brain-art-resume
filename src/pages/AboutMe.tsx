@@ -35,11 +35,11 @@ const AboutMe = () => {
             onContextMenu={(e) => e.preventDefault()}
             className="rounded-full w-64 h-64 object-cover mx-auto mb-8 shadow-xl"
           />
-          <h1 className="text-4xl font-bold mb-4 uppercase">Mariia Shvachko</h1>
-          <p className="text-lg text-gray-600 font-light italic mb-8">
+          <h1 className="text-4xl font-bold mb-4 uppercase text-gray-900 dark:text-gray-100">Mariia Shvachko</h1>
+          <p className="text-lg text-gray-600 dark:text-gray-400 font-light italic mb-8">
             Illustrator & Graphic Designer based in Prague
           </p>
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
             With over a decade of experience in both illustration and graphic design,
             I bring stories to life through visual storytelling. My work combines
             traditional techniques with digital innovation to create unique and
@@ -53,10 +53,10 @@ const AboutMe = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <div className="mb-12">
-            <h2 className="text-2xl font-semibold mb-6">Domains</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-gray-100">Domains</h2>
             <div className="grid grid-cols-2 gap-4">
               {domains.map((domain, index) => (
-                <AboutMeCard 
+                <AboutMeCard
                   key={domain.name}
                   description={domain.description}
                   icon={domain.icon}
@@ -68,10 +68,10 @@ const AboutMe = () => {
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold mb-6">Tools</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-gray-100">Tools</h2>
             <div className="grid grid-cols-2 gap-4">
               {tools.map((tool, index) => (
-                <AboutMeCard 
+                <AboutMeCard
                   key={tool.name}
                   description={tool.description}
                   icon={tool.icon}

@@ -1,11 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: 'class', // Enable dark mode via class strategy
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         background: 'hsl(var(--background))',
+        'secondary-bg': 'hsl(var(--secondary-bg))',
+        'foreground': 'hsl(var(--foreground))',
         // You can define other colors here if needed for your components
       },
       fontFamily: {

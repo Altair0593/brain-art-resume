@@ -6,7 +6,7 @@ import "yet-another-react-lightbox/styles.css";
 import { works } from '../data/works'; // Ensure this import path and data structure are correct
 import { ArrowLeft } from 'lucide-react';
 // Assuming these are correctly defined/imported constants
-import { ASPECT_RATIO_PATTERN, WORK_ITEM_VARIANTS } from '../constants';
+import { WORK_ITEM_VARIANTS } from '../constants';
 
 
 const WorkDetails = () => {
@@ -34,7 +34,7 @@ const WorkDetails = () => {
         {/* Back Button */}
         <button
           onClick={() => navigate(-1)}
-          className="inline-flex items-center gap-2 text-gray-600 hover:text-black transition-colors duration-200 group"
+          className="dark:text-gray-300 dark:hover:text-foreground inline-flex items-center gap-2 text-gray-600 hover:text-black transition-colors duration-200 group"
         >
           <ArrowLeft className="w-5 h-5 transition-transform duration-200 group-hover:-translate-x-1" />
           Back to Works
@@ -46,7 +46,7 @@ const WorkDetails = () => {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl md:text-4xl font-bold mb-4 text-gray-900"
+            className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-foreground"
           >
             {workDetails.title}
           </motion.h1>
@@ -55,7 +55,7 @@ const WorkDetails = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-base md:text-lg text-gray-700 leading-relaxed"
+              className="text-base md:text-lg text-gray-700 leading-relaxed: dark:text-gray-100"
             >
               {workDetails.fullDescription}
             </motion.p>
@@ -68,10 +68,6 @@ const WorkDetails = () => {
             className="columns-1 md:columns-2 lg:columns-3 gap-6 md:gap-8 space-y-6 md:space-y-8"
           >
             {images.map((image, index) => {
-              const patternIndex = index % ASPECT_RATIO_PATTERN.length;
-              const aspectRatioFactor = ASPECT_RATIO_PATTERN[patternIndex];
-              const cssAspectRatio = `1 / ${aspectRatioFactor}`;
-
               return (
                 // Item Wrapper
                 <motion.div
@@ -89,14 +85,13 @@ const WorkDetails = () => {
                   {/* Visual Container */}
                   <motion.div
                     className="relative overflow-hidden rounded-lg bg-gray-100 shadow-md"
-                    style={{ aspectRatio: cssAspectRatio }}
                     whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
                   >
                     {/* The actual image */}
                     <img
                       src={image}
                       alt={`${workDetails.title} - Image ${index + 1}`}
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="w-full h-auto object-cover block"
                       loading="lazy"
                       // Optional: Prevent dragging the image itself (minor deterrent)
                       draggable="false"

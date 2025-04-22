@@ -11,7 +11,7 @@ import WorkDetails from './pages/WorkDetails';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-[#EBE6E4]">
+      <div className="min-h-screen bg-background">
         <Header />
         <SocialLinks />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 min-h-[84vh]">

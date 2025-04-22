@@ -10,9 +10,9 @@ export interface Work {
 export const works: Work[] = [
   {
     id: 'coffee-page',
-    title: 'The coffee page',
-    description: 'Cofee page',
-    fullDescription: 'A children\'s book cover design that captures the magical journey of a tiger through the ancient city of Timbuktu. The project involved creating both the cover art and internal illustrations.',
+    title: 'More Than Just a Drink',
+    description: 'A layout dedicated to coffee',
+    fullDescription: 'A layout dedicated to coffee, showcasing café interiors and coffee beans. The design conveys a cozy atmosphere and highlights the culture of coffee enjoyment',
     category: 'design',
     images: [
       '/images/works/design/coffee-page.jpg',
@@ -163,9 +163,9 @@ export const works: Work[] = [
   },
   {
     id: 'the-art-of-meat',
-    title: 'The art of meat',
-    description: 'The art of meat',
-    fullDescription: 'A children\'s book cover design that captures the magical journey of a tiger through the ancient city of Timbuktu. The project involved creating both the cover art and internal illustrations.',
+    title: 'The Art of Meat',
+    description: 'A double-page layout featuring meat recipes',
+    fullDescription: 'A double-page layout featuring meat recipes with mouth-watering imagery and clear ingredients. Stylish typography and tasteful color use enhance the delicious theme.',
     category: 'design',
     images: [
       '/images/works/design/the-art-of-meat.jpg',
@@ -221,18 +221,6 @@ export const works: Work[] = [
       '/images/works/design/tea-logo-branding.jpg',
     ]
   },
-  // {
-  //   id: 'meditation',
-  //   title: 'Meditation Series',
-  //   description: 'Digital illustration series for wellness app',
-  //   fullDescription: 'A series of digital illustrations created for a wellness app, focusing on themes of mindfulness, peace, and inner harmony.',
-  //   category: 'illustration',
-  //   images: [
-  //     'https://images.unsplash.com/photo-1611516491426-03025e6043c8?auto=format&fit=crop&q=80&w=2340&ixlib=rb-4.0.3',
-  //     'https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&q=80&w=2340&ixlib=rb-4.0.3',
-  //     'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=2340&ixlib=rb-4.0.3'
-  //   ]
-  // }
 ];
 
 export const getWorksByCategory = (category: 'design' | 'illustration') => {

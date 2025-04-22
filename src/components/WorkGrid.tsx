@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Work } from '../data/works'; // Adjust import if necessary
-import { ASPECT_RATIO_PATTERN, WORK_ITEM_VARIANTS } from '../constants';
+import { WORK_ITEM_VARIANTS } from '../constants';
 
 // Define Work interface (ensure it matches your data)
 
@@ -19,11 +19,6 @@ const WorkGrid = ({ works }: { works: Work[] }) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.5 } },
-  };
-
-  const overlayVariants = {
-    initial: { opacity: 0 },
-    hover: { opacity: 1 },
   };
 
   const imageVariants = {

@@ -4,7 +4,15 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: #EBE6E4;
+    --foreground: 222.2 84% 4.9%;
+    --secondary-bg: #f1eeec;
+  }
+  
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --secondary-bg: #110903;
   }
 
   html {
@@ -13,7 +21,7 @@
   }
 
   body {
-    @apply antialiased bg-background;
+    @apply antialiased bg-background text-foreground;
   }
 
   h1, h2, h3, h4, h5, h6 {
