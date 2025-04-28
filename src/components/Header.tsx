@@ -50,7 +50,7 @@ const Header = () => {
         {/* Mobile navigation */}
         {isMenuOpen && (
           <motion.div
-            className="md:hidden py-4 space-y-4 border-b border-gray-200 dark:border-zinc-800 "
+            className="md:hidden py-4 space-y-4 border-b border-gray-200 dark:border-zinc-800 uppercase"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
@@ -60,7 +60,7 @@ const Header = () => {
               active={location.pathname === "/"}
               onClick={() => setIsMenuOpen(false)}
             >
-              <span className='uppercase'>Graphic Designer</span>
+              <span>Graphic Designer</span>
             </MobileNavLink>
             <MobileNavLink
               to="/illustrator"
@@ -74,7 +74,7 @@ const Header = () => {
               active={location.pathname === "/about"}
               onClick={() => setIsMenuOpen(false)}
             >
-              <span className='uppercase'>About Me</span>
+              <span>About Me</span>
             </MobileNavLink>
           </motion.div>
         )}
