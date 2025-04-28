@@ -1,4 +1,3 @@
-import React from 'react';
 import WorkGrid from '../components/WorkGrid';
 import { getWorksByCategory } from '../data/works';
 
@@ -7,7 +6,7 @@ const Illustrator = () => {
 
   return (
     <div className="max-w-7xl mx-auto">
-      <h1 className="text-4xl mb-12">Illustration Works</h1>
+      <h1 className="text-4xl mb-12 uppercase">Illustration Works</h1>
       <WorkGrid works={works} />
     </div>
   );

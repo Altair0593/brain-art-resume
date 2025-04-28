@@ -1,5 +1,16 @@
 import { motion } from 'framer-motion';
-import { Book, Palette, Box, Pen, Film, Figma, Image, Layout, Brush, Video } from 'lucide-react';
+import {
+  Book,
+  Palette,
+  Box, 
+  Pen,
+  //  Film,
+  Figma, 
+  Image, 
+  Layout,
+  Brush,
+  //  Video 
+} from 'lucide-react';
 import AboutMeCard from '../components/AboutMeCard';
 
 const domains = [
@@ -8,7 +19,7 @@ const domains = [
   { name: 'Book Design', icon: Layout, description: 'Crafting beautiful book covers and interior layouts' },
   { name: 'Digital Illustration', icon: Pen, description: 'Creating unique digital artwork and illustrations' },
   { name: 'Package Design', icon: Box, description: 'Designing eye-catching product packaging' },
-  { name: 'Motion Graphics', icon: Film, description: 'Bringing designs to life through animation' }
+  // { name: 'Motion Graphics', icon: Film, description: 'Bringing designs to life through animation' }
 ];
 
 const tools = [
@@ -16,8 +27,8 @@ const tools = [
   { name: 'Adobe Illustrator', icon: Brush, description: 'Vector graphics and illustrations' },
   { name: 'Figma', icon: Figma, description: 'UI/UX design and prototyping' },
   { name: 'Adobe InDesign', icon: Layout, description: 'Page layout and publishing' },
-  { name: 'Procreate', icon: Pen, description: 'Digital illustration and art' },
-  { name: 'Adobe After Effects', icon: Video, description: 'Motion graphics and animation' }
+  // { name: 'Procreate', icon: Pen, description: 'Digital illustration and art' },
+  // { name: 'Adobe After Effects', icon: Video, description: 'Motion graphics and animation' }
 ];
 
 const AboutMe = () => {
@@ -29,12 +40,14 @@ const AboutMe = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <img
-            src="/images/avatar.jpg"
-            alt="Profile"
-            onContextMenu={(e) => e.preventDefault()}
-            className="rounded-full w-64 h-64 object-cover mx-auto mb-8 shadow-xl"
-          />
+          <div className='mx-auto w-64 h-64 mb-8 rounded-full shadow-xl dark:shadow-md dark:shadow-red-400 bg-white dark:bg-transparent'>
+            <img
+              src="/images/avatar-transparent.png"
+              alt="Profile"
+              onContextMenu={(e) => e.preventDefault()}
+              className="p-4 w-64 h-64 mx-auto"
+            />
+          </div>
           <h1 className="text-4xl font-bold mb-4 uppercase text-gray-900 dark:text-gray-100">Mariia Shvachko</h1>
           <p className="text-lg text-gray-600 dark:text-gray-400 font-light italic mb-8">
             Illustrator & Graphic Designer based in Prague

@@ -1,12 +1,16 @@
 import { motion } from 'framer-motion';
-import { Linkedin, Instagram, Palette } from 'lucide-react';
+import { 
+  Linkedin,
+  Instagram,
+  Palette
+ } from 'lucide-react';
 
 const SocialLinks = () => {
   const links = [
     // Ensure URLs are correct/placeholders for your actual links
-    { icon: Linkedin, name: 'LinkedIn', url: 'https://www.linkedin.com/' },
-    { icon: Instagram, name: 'Instagram', url: 'https://www.instagram.com/' },
-    { icon: Palette, name: 'Behance', url: 'https://www.behance.net/' },
+    { icon: Linkedin, name: 'LinkedIn', url: 'https://www.linkedin.com/in/mariia-shvachko-b3057a170/' },
+    { icon: Instagram, name: 'Instagram', url: 'https://www.instagram.com/_m.brain.art_?igsh=ODg4OThscWNlYXVr' },
+    { icon: Palette, name: 'Behance', url: 'https://www.behance.net/Marianna_D' },
   ];
 
   // Variants for the smooth text animation

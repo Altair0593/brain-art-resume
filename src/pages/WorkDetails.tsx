@@ -3,7 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import { works } from '../data/works'; // Ensure this import path and data structure are correct
+import sanitize from 'sanitize-html'
+import { MERGED_WORKS } from '../data/works'; // Ensure this import path and data structure are correct
 import { ArrowLeft } from 'lucide-react';
 // Assuming these are correctly defined/imported constants
 import { WORK_ITEM_VARIANTS } from '../constants';
@@ -15,7 +16,8 @@ const WorkDetails = () => {
   const [open, setOpen] = React.useState(false);
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
 
-  const workDetails = works.find(work => work.id === id);
+  //Refactor the logic of getting the work details
+  const workDetails = MERGED_WORKS.find(work => work.id === id);
 
   if (!workDetails) {
     return <div className="text-center py-10">Work item not found.</div>;
@@ -55,9 +57,12 @@ const WorkDetails = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-base md:text-lg text-gray-700 leading-relaxed: dark:text-gray-100"
+              dangerouslySetInnerHTML={{
+                __html: sanitize(workDetails.fullDescription)
+              }}
+              className="text-base md:text-lg text-gray-700 leading-relaxed: dark:text-gray-100 [&>p]:mb-3 [&>a]:underline"
             >
-              {workDetails.fullDescription}
+              {/* {workDetails.fullDescription} */}
             </motion.p>
           )}
         </div>

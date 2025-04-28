@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import SocialLinks from './components/SocialLinks';
 import GraphicDesigner from './pages/GraphicDesigner';
-// import Illustrator from './pages/Illustrator';
+import Illustrator from './pages/Illustrator';
 import AboutMe from './pages/AboutMe';
 import WorkDetails from './pages/WorkDetails';
 
@@ -18,8 +18,7 @@ function App() {
           <AnimatePresence mode="wait">
             <Routes>
               <Route path="/" element={<GraphicDesigner />} />
-              {/* The Illustrator functionality will be implemented soon */}
-              {/* <Route path="/illustrator" element={<Illustrator />} /> */}
+              <Route path="/illustrator" element={<Illustrator />} />
               <Route path="/about" element={<AboutMe />} />
               <Route path="/work/:id" element={<WorkDetails />} />
             </Routes>

@@ -33,16 +33,15 @@ const Header = () => {
          
 
           {/* Desktop navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 uppercase">
             <NavLink to="/" active={location.pathname === "/"}>
-              <span className='uppercase'>Graphic Designer</span>
+              <span>Graphic Designer</span>
             </NavLink>
-            {/* The  Illustrator section will be implemented soon*/}
-            {/* <NavLink to="/illustrator" active={location.pathname === "/illustrator"}>
+            <NavLink to="/illustrator" active={location.pathname === "/illustrator"}>
               Illustrator
-            </NavLink> */}
+            </NavLink>
             <NavLink to="/about" active={location.pathname === "/about"}>
-              <span className='uppercase'>About Me</span>
+              <span>About Me</span>
             </NavLink>
             <ThemeSwitcher />
           </div>
