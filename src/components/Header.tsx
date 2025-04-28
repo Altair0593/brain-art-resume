@@ -62,14 +62,13 @@ const Header = () => {
             >
               <span className='uppercase'>Graphic Designer</span>
             </MobileNavLink>
-            {/* ToDo the illustrator page will be added soon */}
-            {/* <MobileNavLink
+            <MobileNavLink
               to="/illustrator"
               active={location.pathname === "/illustrator"}
               onClick={() => setIsMenuOpen(false)}
             >
               Illustrator
-            </MobileNavLink> */}
+            </MobileNavLink>
             <MobileNavLink
               to="/about"
               active={location.pathname === "/about"}
